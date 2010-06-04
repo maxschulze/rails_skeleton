@@ -1,26 +1,26 @@
-= Setup
+= Setup =
 
-== git
+== git ==
 
 * git submodules init
 * git submodules update
 
-== bundler
+== bundler ==
 
 * bundle install
 
-== app
+== app ==
 
 * Make sure to change the application name in application.rb and environment.rb
 * Change database.yml to your needs
 
-== rake
+== rake ==
 
 * rake db:create
 * rake db:migrate
 * rake db:migrate RAILS_ENV=test
 * rake ts:conf
 
-== tests
+== tests ==
 
 * try autotest to see if the app is working
