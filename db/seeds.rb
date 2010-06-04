@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+I18nDatabase::Locale.create(:code => 'en', :name => 'English')
+I18nDatabase::Locale.create(:code => 'de', :name => 'German')
+I18nDatabase::Locale.create(:code => 'es', :name => 'Spanish')
