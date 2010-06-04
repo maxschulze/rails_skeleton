@@ -12,6 +12,12 @@ h2. git
 * git submodules init
 * git submodules update
 
+h2. rvm
+
+* rvm gemset create GEMSET_NAME
+* echo "rvm 1.8.7-p249@GEMSET_NAME" > .rvmrc
+* gem install bundle
+
 h2. bundler
 
 * bundle install
