@@ -1,20 +1,28 @@
-= Setup =
+h1. Skeleton Specs
 
-== git ==
+* Devise user / migration / aegis roles
+* 960gs CSS / reset css / jquery / ujs / various plugins
+* rspec / capybara / autotest / selenium (optional in rspec helper)
+* comes with some default view helpers
+
+h1. Setup
+
+h2. git
 
 * git submodules init
 * git submodules update
 
-== bundler ==
+h2. bundler
 
 * bundle install
 
-== app ==
+h2. App Setup
 
 * Make sure to change the application name in application.rb and environment.rb
+* Change Application Layout to your needs
 * Change database.yml to your needs
 
-== rake ==
+h2. Rake
 
 * rake db:create
 * rake db:migrate
@@ -22,6 +30,6 @@
 * rake db:seed
 * rake ts:conf
 
-== tests ==
+h2. Tests
 
 * try autotest to see if the app is working
