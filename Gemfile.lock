@@ -1,0 +1,300 @@
+--- 
+dependencies: 
+  ruby-debug: 
+    group: 
+    - :development
+    version: ">= 0"
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta3
+  annotate: 
+    group: 
+    - :development
+    version: ">= 0"
+  selenium-webdriver: 
+    group: 
+    - :test
+    version: ">= 0"
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
+  sqlite3-ruby: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - sqlite3
+  autotest: 
+    group: 
+    - :test
+    version: ">= 0"
+  autotest-growl: 
+    group: 
+    - :test
+    version: ">= 0"
+  inherited_resources: 
+    group: 
+    - :default
+    version: = 1.1.2
+  aegis: 
+    group: 
+    - :default
+    version: ">= 0"
+  wirble: 
+    group: 
+    - :development
+    version: ">= 0"
+  thinking-sphinx: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - thinking_sphinx
+  riddle: 
+    group: 
+    - :default
+    version: ">= 0"
+  rspec-rails: 
+    group: 
+    - :test
+    version: ">= 2.0.0.beta.8"
+  will_paginate: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - will_paginate
+  devise: 
+    group: 
+    - :default
+    version: = 1.1.rc1
+  simple_form: 
+    group: 
+    - :default
+    version: ">= 0"
+  has_scope: 
+    group: 
+    - :default
+    version: ">= 0"
+  mocha: 
+    group: 
+    - :test
+    version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 1.2.3"
+    require: 
+    - factory_girl
+  blockenspiel: 
+    group: 
+    - :default
+    version: ">= 0"
+  aasm: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - aasm
+  responders: 
+    group: 
+    - :default
+    version: ">= 0"
+  hermes: 
+    group: 
+    - :default
+    version: ">= 0"
+  capybara: 
+    group: 
+    - :test
+    version: ">= 0"
+  autotest-rails: 
+    group: 
+    - :test
+    version: ">= 0"
+  launchy: 
+    group: 
+    - :test
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- ZenTest: 
+    version: 4.3.1
+- aasm: 
+    version: 2.1.5
+    source: 1
+- abstract: 
+    version: 1.0.0
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.3.7
+- memcache-client: 
+    version: 1.8.3
+- tzinfo: 
+    version: 0.3.22
+- activesupport: 
+    version: 3.0.0.beta3
+- activemodel: 
+    version: 3.0.0.beta3
+- erubis: 
+    version: 2.6.5
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.3
+- rack-test: 
+    version: 0.5.4
+- actionpack: 
+    version: 3.0.0.beta3
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.7
+- mail: 
+    version: 2.2.1
+- text-hyphen: 
+    version: 1.0.0
+- text-format: 
+    version: 1.0.0
+- actionmailer: 
+    version: 3.0.0.beta3
+- arel: 
+    version: 0.3.3
+- activerecord: 
+    version: 3.0.0.beta3
+- activeresource: 
+    version: 3.0.0.beta3
+- aegis: 
+    version: 2.0.3
+    source: 4
+- annotate: 
+    version: 2.4.0
+- autotest: 
+    version: 4.2.10
+- autotest-growl: 
+    version: 0.2.4
+- autotest-rails: 
+    version: 4.1.0
+- blockenspiel: 
+    version: 0.3.3
+- bundler: 
+    version: 0.9.25
+- culerity: 
+    version: 0.2.10
+- nokogiri: 
+    version: 1.4.2
+- ffi: 
+    version: 0.6.3
+- json_pure: 
+    version: 1.4.3
+- selenium-webdriver: 
+    version: 0.0.18
+- capybara: 
+    version: 0.3.8
+- columnize: 
+    version: 0.3.1
+- configuration: 
+    version: 1.1.0
+- warden: 
+    version: 0.10.5
+- devise: 
+    version: 1.1.rc1
+- diff-lcs: 
+    version: 1.1.2
+- factory_girl: 
+    version: 1.2.3
+    source: 0
+- growl: 
+    version: 1.0.3
+- has_scope: 
+    version: 0.5.0
+- hermes: 
+    version: 0.1.0
+- responders: 
+    version: 0.6.1
+- inherited_resources: 
+    version: 1.1.2
+- launchy: 
+    version: 0.3.5
+- linecache: 
+    version: "0.43"
+- mocha: 
+    version: 0.9.8
+- mysql: 
+    version: 2.8.1
+- thor: 
+    version: 0.13.6
+- railties: 
+    version: 3.0.0.beta3
+- rails: 
+    version: 3.0.0.beta3
+- riddle: 
+    version: 1.0.10
+- rspec-core: 
+    version: 2.0.0.beta.9
+- rspec-expectations: 
+    version: 2.0.0.beta.9
+- rspec-mocks: 
+    version: 2.0.0.beta.9
+- rspec: 
+    version: 2.0.0.beta.9
+- webrat: 
+    version: 0.7.1
+- rspec-rails: 
+    version: 2.0.0.beta.9.1
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
+- simple_form: 
+    version: 1.2.0
+- sqlite3-ruby: 
+    version: 1.2.5
+- thinking-sphinx: 
+    version: 1.3.16
+    source: 2
+- will_paginate: 
+    version: 3.0.pre
+    source: 3
+- wirble: 
+    version: 0.1.3
+hash: ffacd40da686d0a9dcfbb274d672763eecf29994
+sources: 
+- Git: 
+    uri: git://github.com/thoughtbot/factory_girl.git
+    branch: rails3
+    git: git://github.com/thoughtbot/factory_girl.git
+    require: factory_girl
+    ref: feac7298352a83fef0717d8beadd2eda9aabfe56
+- Git: 
+    uri: git://github.com/kangguru/aasm.git
+    git: git://github.com/kangguru/aasm.git
+    require: aasm
+    ref: 3fe43b3d7609c008c75a1891ea63df098dd3e231
+- Git: 
+    uri: git://github.com/quasor/thinking-sphinx.git
+    branch: rails3
+    git: git://github.com/quasor/thinking-sphinx.git
+    require: thinking_sphinx
+    ref: e054ad736cff96713d499c0af7a085c2d043e164
+- Git: 
+    uri: git://github.com/mislav/will_paginate.git
+    branch: rails3
+    git: git://github.com/mislav/will_paginate.git
+    require: will_paginate
+    ref: 60aa1c7b2ef03ee7c7a5ed657efb479a69f7d128
+- Git: 
+    uri: git://github.com/fearoffish/aegis.git
+    branch: rails3
+    git: git://github.com/fearoffish/aegis.git
+    ref: f11e455b68a04194ca1a9820994325c461421d9e
+- Rubygems: 
+    uri: http://gemcutter.org
+- Rubygems: 
+    uri: http://gems.github.com

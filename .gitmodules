@@ -1,0 +1,15 @@
+[submodule "vendor/plugins/i18n_backend_database"]
+	path = vendor/plugins/i18n_backend_database
+	url = git://github.com/maxschulze/i18n_backend_database.git
+[submodule "vendor/plugins/rails3_acts_as_paranoid"]
+	path = vendor/plugins/rails3_acts_as_paranoid
+	url = git://github.com/maxschulze/rails3_acts_as_paranoid.git
+[submodule "vendor/plugins/paperclip"]
+	path = vendor/plugins/paperclip
+	url = git://github.com/thoughtbot/paperclip.git
+[submodule "vendor/plugins/dynamic_form"]
+	path = vendor/plugins/dynamic_form
+	url = git://github.com/rails/dynamic_form.git
+[submodule "vendor/plugins/country_select"]
+	path = vendor/plugins/country_select
+	url = git://github.com/rails/country_select.git

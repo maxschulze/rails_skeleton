@@ -1,0 +1,1 @@
+Hermes.setup! if Rails.env == :development
