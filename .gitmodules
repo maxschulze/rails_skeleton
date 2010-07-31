@@ -1,6 +1,3 @@
-[submodule "vendor/plugins/i18n_backend_database"]
-	path = vendor/plugins/i18n_backend_database
-	url = git://github.com/maxschulze/i18n_backend_database.git
 [submodule "vendor/plugins/rails3_acts_as_paranoid"]
 	path = vendor/plugins/rails3_acts_as_paranoid
 	url = git://github.com/maxschulze/rails3_acts_as_paranoid.git
