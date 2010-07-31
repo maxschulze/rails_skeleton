@@ -1,0 +1,8 @@
+== General
+
+* Pretty buttons
+
+== Validations
+
+* Add unobstrusive javascript validations support
+* Add mask support (same as hint, but with JS)

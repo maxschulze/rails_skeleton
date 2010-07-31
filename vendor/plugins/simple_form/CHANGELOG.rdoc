@@ -1,0 +1,37 @@
+* enhancements
+  * Added error class on wrappers (by github.com/jduff)
+  * Changed numeric types to have type=number for HTML5
+
+== 1.2.0
+
+* deprecation
+  * Changed simple_form_install generator to simple_form:install
+
+* enhancements
+  * Added support to presence validation to check if attribute is required or not (by github.com/gcirne)
+  * Added .input as class to wrapper tag
+  * Added config options for hint and error tags (by github.com/tjogin)
+
+== 1.1.3
+
+* deprecation
+  * removed :conditions, :order, :joins and :include support in f.association
+
+== 1.1.2
+
+* bug fix
+  * Ensure type is set to "text" and not "string"
+
+== 1.1.1
+
+* bug fix
+  * Fix some escaping issues
+
+== 1.1.0
+
+* enhancements
+  * Rails 3 support with generators, templates and HTML 5
+
+== 1.0
+
+* First release
