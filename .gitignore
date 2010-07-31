@@ -6,3 +6,4 @@ config/database.yml
 .rvmrc
 db/schema.rb
 conf/*.sphinx.conf
+.DS_Store
