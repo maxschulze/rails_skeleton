@@ -1,9 +1,10 @@
 source 'http://gemcutter.org'
 source 'http://gems.github.com'
 
-gem 'rails', '3.0.0.beta3'
+gem 'bundler', '1.0.0.rc.1'
+gem "rails", "3.0.0.rc"
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3' # freeze to 1.2.5, 1.3 does not work on app1
 gem 'mysql'
 
 gem 'simple_form'
