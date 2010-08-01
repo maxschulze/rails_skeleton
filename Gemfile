@@ -6,6 +6,7 @@ gem "rails", "3.0.0.rc"
 
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3' # freeze to 1.2.5, 1.3 does not work on app1
 gem 'mysql'
+gem 'mysql2'
 
 gem 'devise', '1.1.rc2'
 gem 'aegis', '2.1.1'
