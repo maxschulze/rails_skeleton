@@ -4,8 +4,8 @@ module InheritedTemplatesBuilder
   
   class Base
     include Blockenspiel::DSL
+    include ActionDispatch::Routing
     include ActionDispatch::Routing::UrlFor
-    include ActionController::PolymorphicRoutes
     include Rails.application.routes.url_helpers
     default_url_options[:host] = Rails.env == 'production' ? 'beta.exploreb2b.com' : 'localhost:3000'
     
