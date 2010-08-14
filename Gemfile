@@ -8,18 +8,18 @@ gem 'mysql'
 gem 'mysql2'
 
 gem 'devise', '1.1.rc2'
-gem 'aegis', '2.1.1', :git => 'http://github.com/fearoffish/aegis.git', :branch => 'rails3'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'thinking-sphinx', '2.0.0.rc1', :require => 'thinking_sphinx'
 gem 'inherited_resources', '1.1.2'
 gem 'has_scope'
 gem 'responders'
-#gem 'hermes'
 gem "aasm", '2.1.5'
 gem 'riddle'
 gem 'blockenspiel'
 gem 'pdf-reader'
 gem 'rubyzip'
+gem 'bcrypt-ruby'
+gem 'colored'
 
 group :test do
   gem "rspec-rails", ">= 2.0.0.beta.8"

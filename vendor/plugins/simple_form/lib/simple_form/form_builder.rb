@@ -1,5 +1,3 @@
-require 'inherited_templates_builder'
-
 module SimpleForm
   class FormBuilder < ActionView::Helpers::FormBuilder
     attr_reader :template, :object_name, :object, :attribute_name, :column,
@@ -165,10 +163,6 @@ module SimpleForm
       else
         send(type, *args, &block)
       end
-    end
-    
-    def buttons(*args, &block)
-      return InheritedTemplatesBuilder::Buttons.render(self, block, *args)
     end
     
     def ckeditor(name)

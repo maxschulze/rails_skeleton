@@ -13,7 +13,7 @@ Devise.setup do |config|
   # config.authentication_keys = [ :email ]
 
   # Tell if authentication through request.params is enabled. True by default.
-  # config.params_authenticatable = true
+  config.params_authenticatable = true
 
   # Tell if authentication through HTTP Basic Auth is enabled. True by default.
   # config.http_authenticatable = true
@@ -24,17 +24,17 @@ Devise.setup do |config|
   # ==> Configuration for :database_authenticatable
   # Invoke `rake secret` and use the printed value to setup a pepper to generate
   # the encrypted password. By default no pepper is used.
-  # config.pepper = "rake secret output"
+  config.pepper = "6efb707c1373a4c3b98b92e490ef46d14109b1e222e9494e77f1641d2a032c443fb4513d0d8ba19a8ef4d5fd532f444540048532f33bd973a1b4f7cab04efec3"
 
   # Configure how many times you want the password is reencrypted. Default is 10.
-  # config.stretches = 10
+  config.stretches = 10
 
   # Define which will be the encryption algorithm. Supported algorithms are :sha1
   # (default), :sha512 and :bcrypt. Devise also supports encryptors from others
   # authentication tools as :clearance_sha1, :authlogic_sha512 (then you should set
   # stretches above to 20 for default behavior) and :restful_authentication_sha1
   # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
-  # config.encryptor = :sha1
+  config.encryptor = :bcrypt
 
   # ==> Configuration for :confirmable
   # The time you want give to your user to confirm his account. During this time
@@ -89,17 +89,17 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "sessions/users/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = true
+  config.scoped_views = true
 
   # By default, devise detects the role accessed based on the url. So whenever
   # accessing "/users/sign_in", it knows you are accessing an User. This makes
   # routes as "/sign_in" not possible, unless you tell Devise to use the default
   # scope, setting true below.
-  # config.use_default_scope = true
+  config.use_default_scope = true
 
   # Configure the default scope used by Devise. By default it's the first devise
   # role declared in your routes.
-  # config.default_scope = :user
+  config.default_scope = :user
 
   # If you want to use other strategies, that are not (yet) supported by Devise,
   # you can configure them inside the config.warden block. The example below

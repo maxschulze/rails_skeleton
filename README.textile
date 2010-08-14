@@ -14,7 +14,7 @@ h2. RVM
 
 h2. Bundler
 
-* Install Bundler 1.0.0 RC1 with _gem install bundler --pre_
+* Install Bundler 1.0.0.rc.4 with _gem install bundler --pre_
 * Install Gems with _bundle_
 
 h2. git

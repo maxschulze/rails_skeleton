@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
-  
-  around_filter :rescue_access_denied
 
   before_filter :set_user
   before_filter :set_locale
@@ -49,13 +47,6 @@ private
     rescue Exception => exception
       logger.error "Could not set User.current. Error was #{exception.to_s}"
     end
-  end
-
-  # Rescue if a user
-  def rescue_access_denied
-    yield
-  rescue Aegis::AccessDenied => e 
-    render :text => e.message, :status => :forbidden
   end
   
 end
