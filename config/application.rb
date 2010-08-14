@@ -9,7 +9,7 @@ module Ems
     # -- all .rb files in that directory are automatically loaded.
 
     # Add additional load paths for your own custom dirs
-    config.autoload_paths += %W( #{config.root}/app/observers #{config.root}/lib #{config.root}/app/viewers )
+    config.autoload_paths += %W( #{config.root}/app/observers #{config.root}/lib #{config.root}/app/viewers #{config.root}/lib #{config.root}/app/middleware )
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named
@@ -25,6 +25,7 @@ module Ems
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
+    I18n.backend = I18n::Backend::Database.new
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
@@ -37,7 +38,7 @@ module Ems
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
   end
 end
 
