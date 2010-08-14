@@ -10,3 +10,6 @@
 [submodule "vendor/plugins/country_select"]
 	path = vendor/plugins/country_select
 	url = git://github.com/rails/country_select.git
+[submodule "vendor/plugins/uv_inherited_templates"]
+	path = vendor/plugins/uv_inherited_templates
+	url = git@uv:uv_inherited_templates.git
