@@ -30,7 +30,8 @@ module Ems
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :inherited_templates
-      g.test_framework :rspec, :fixture => false, :views => false
+      g.test_framework :rspec, :fixture => false, :view_specs => false
+      g.stylesheets false
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
