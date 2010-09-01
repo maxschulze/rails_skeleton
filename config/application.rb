@@ -28,9 +28,9 @@ module Ems
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
-      # g.orm             :active_record
+      g.orm             :active_record
       g.template_engine :inherited_templates
-      # g.test_framework  :test_unit, :fixture => true
+      g.test_framework :rspec, :fixture => false, :views => false
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
