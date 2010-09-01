@@ -36,7 +36,7 @@ group :development do
   gem 'factory_girl_rails'
   gem 'wirble'
   gem 'annotate'
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
   gem 'hirb'
   gem 'pdf-reader'
 end
