@@ -3,4 +3,4 @@
 # I18n.backend.localize_text_tag = '^^'      # optional: specify an alternate localize text tag, the default is ^^
 # I18n.default_locale = :en
 
-I18n.backend = I18n::Backend::Database.new
+# I18n.backend = I18n::Backend::Database.new
