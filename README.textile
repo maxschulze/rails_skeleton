@@ -1,26 +1,54 @@
+h1. Changelog
+
+h2. 1. September 2010
+
+* update to mysql2 (dryed up the database.yml)
+* update to Rails 3 Release
+* change factory_girl to factory_girl_rails
+* add factory_girl_rails to the development group, in order to have fast access to factories within the console
+* added rspec-rails to the development group, to enable rspec rake tasks in development mode
+* removed autotest from Gemfile to let bundler resolve the dependency
+* Added Bundler.setup to the rake file, to ensure all gems are required
+* removed view_specs and stylesheets from scaffolding
+* updated the boot.rb to match the current Rails 3 boot process
+* added active_support deprecation config
+* removed i18n_database (commented it out)
+* updated the factories to match the user model
+* using the mocha mocking framework with rspec
+* add a spec for the user, just to have a starting point
+
 h1. Skeleton Specs
 
 * Devise user / migration / aegis roles
 * 960gs CSS / reset css / jquery / ujs / various plugins
 * rspec / capybara / autotest / selenium (optional in rspec helper)
-* comes with some default view helpers
 
 h1. Setup
 
 h2. RVM
 
 * Create a new gemset for your project
-* Create .rvmrc file with: _echo "rvm 1.8.7-p299@YOUR_GEMSET"_
+* Create .rvmrc file with: @echo "rvm 1.8.7-p302@YOUR_GEMSET"@
 
 h2. Bundler
 
-* Install Bundler 1.0.0.rc.4 with _gem install bundler --pre_
-* Install Gems with _bundle_
+* Install Bundler 1.0.0 with @gem install bundler --pre@
+* Install Gems with @bundle@
+
+h3. Bundler issues
+
+In case you run into an issue with bundler that looks like this:
+
+.bc Valid types are [:development, :runtime], not nil (ArgumentError)
+
+Please make sure to install a recent bundler @gem install bundler --pre@ does the trick. Even the 1.0.0 relase doesn't fix this issue.
 
 h2. git
 
-* git submodules init
-* git submodules update
+Install missing plugins which are defined as submodules
+
+* @git submodules init@
+* @git submodules update@
 
 h2. App Setup
 
@@ -30,12 +58,13 @@ h2. App Setup
 
 h2. Rake
 
-* rake db:create
-* rake db:migrate
-* rake db:migrate RAILS_ENV=test
-* rake db:seed
-* rake ts:conf
+* @rake db:create:all@
+* @rake db:migrate@
+* @rake db:test:clone@
+* @rake db:seed@
+* @rake ts:conf@
 
 h2. Tests
 
-* try autotest to see if the app is working
+* start @rake@ to test factories and specs
+* or start @autotest@ to get into autotesting mode
