@@ -3,7 +3,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails)
 require 'rspec/rails'
-require 'capybara/rails' 
+require 'capybara/rails'
 require 'capybara/dsl'
 
 # require "selenium-webdriver"
@@ -13,16 +13,16 @@ Capybara.default_selector = :css
 # Capybara.default_driver = :selenium
 
 Rspec.configure do |config|
-  config.mock_with :rspec
-  
+  config.mock_with :mocha
+
   config.use_transactional_examples = true
   # config.use_instantiated_fixtures = false
-  
+
   config.include Capybara
-  config.before(:all) do
-    I18nDatabase::Locale.new( :code => 'en', :name => 'English' )
-    I18nDatabase::Locale.new( :code => 'es', :name => 'Spanish' )
-  end
+  # config.before(:all) do
+  #     I18nDatabase::Locale.new( :code => 'en', :name => 'English' )
+  #     I18nDatabase::Locale.new( :code => 'es', :name => 'Spanish' )
+  #   end
 end
 
 include Devise::TestHelpers
