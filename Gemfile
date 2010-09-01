@@ -2,9 +2,7 @@ source 'http://gemcutter.org'
 source 'http://gems.github.com'
 
 gem "rails", "3.0.0"
-
 #gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3' # freeze to 1.2.5, 1.3 does not work on app1
-#gem 'mysql'
 gem 'mysql2'
 
 gem 'devise', '1.1.rc2'
@@ -24,7 +22,6 @@ gem 'colored'
 group :test do
   gem "rspec-rails", "~> 2.0.0.beta.20"
   gem 'autotest-rails'
-  gem 'autotest'
   gem 'autotest-growl'
   gem 'mocha'
   gem "capybara"
@@ -34,6 +31,9 @@ group :test do
 end
 
 group :development do
+  # rspec needs to be in development to add rake tasks
+  gem "rspec-rails", "~> 2.0.0.beta.20"
+  gem 'factory_girl_rails'
   gem 'wirble'
   gem 'annotate'
   gem 'ruby-debug'
