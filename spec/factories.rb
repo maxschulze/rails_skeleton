@@ -5,19 +5,13 @@ Factory.sequence :email do |n|
   "person#{n}@example.com"
 end
 
-#----------------------------------------------------------------------#
-# factories, which do not rely on other factories
-#----------------------------------------------------------------------#
-Factory.define :user do |f|
-  f.email Factory.next :email
-  f.password "secret"
-  f.password_confirmation "secret"
+Factory.sequence :login do |n|
+  "person#{n}"
 end
 
 #----------------------------------------------------------------------#
-# factories with associations
+# factories, which do not rely on other factories
 #----------------------------------------------------------------------#
-
 Factory.define :user do |f|
   f.email Factory.next :email
   f.login Factory.next :login
@@ -26,3 +20,7 @@ Factory.define :user do |f|
   f.password "secret"
   f.password_confirmation "secret"
 end
+
+#----------------------------------------------------------------------#
+# factories with associations
+#----------------------------------------------------------------------#
