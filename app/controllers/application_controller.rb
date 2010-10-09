@@ -1,42 +1,44 @@
+# -*- coding: utf-8 -*-
+require "application_responder"
+
 class ApplicationController < ActionController::Base
+  self.responder = ApplicationResponder
+  respond_to :html
+
   protect_from_forgery
   layout 'application'
 
   before_filter :set_user
   before_filter :set_locale
-  
+  before_filter :set_sensor
+  before_filter :collect_money
+
   helper :all
 
-private
+  private
 
-  def authenticate_user!
-    if Rails.env != 'test'
-      super
-    end
-  end
-  
   # If the params[:locale] is set it will be used as the first priority
   # If the locale is not forced either the HTTP header locale will be used
   # or the +I18n.default_locale+
-  def set_locale 
-    # if params[:locale] is nil then I18n.default_locale will be used  
+  def set_locale
+    # if params[:locale] is nil then I18n.default_locale will be used
     I18n.locale = 'en'
-    
+
     # if params[:locale].present? || session[:locale].present?
     #   session[:locale] = params[:locale] if params[:locale].present?
     #   I18n.locale = session[:locale]
     # else
-    #   logger.debug "* Accept-Language: #{request.env['HTTP_ACCEPT_LANGUAGE']}"  
-    #   I18n.locale = extract_locale_from_accept_language_header 
+    #   logger.debug "* Accept-Language: #{request.env['HTTP_ACCEPT_LANGUAGE']}"
+    #   I18n.locale = extract_locale_from_accept_language_header
     #   logger.debug "* Locale set to '#{I18n.locale}'"
     # end
-  end 
-  
+  end
+
   # extracts the locale from the HTTP header to determine the user's prefered language
-  def extract_locale_from_accept_language_header 
-    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first 
-  end 
-  
+  def extract_locale_from_accept_language_header
+    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+  end
+
   # set the User.current constant for accessing the current user
   # outside controllers and views
   def set_user
@@ -48,5 +50,5 @@ private
       logger.error "Could not set User.current. Error was #{exception.to_s}"
     end
   end
-  
+
 end

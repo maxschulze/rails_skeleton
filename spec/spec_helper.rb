@@ -1,32 +1,32 @@
-# This file is copied to ~/spec when you run 'ruby script/generate rspec'
-# from the project root directory.
-ENV["RAILS_ENV"] ||= 'test'
-require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails)
-require 'rspec/rails'
-require 'capybara/rails'
-require 'capybara/dsl'
+require 'rubygems'
+require 'spork'
 
-# require "selenium-webdriver"
-# Selenium::WebDriver.for :chrome
+Spork.prefork do
+  # This file is copied to spec/ when you run 'rails generate rspec:install'
+  ENV["RAILS_ENV"] ||= 'test'
+  require File.expand_path("../../config/environment", __FILE__)
+  require 'rspec/rails'
+  require "paperclip/matchers"
 
-Capybara.default_selector = :css
-# Capybara.default_driver = :selenium
-
-Rspec.configure do |config|
-  config.mock_with :mocha
-
-  config.use_transactional_examples = true
-  # config.use_instantiated_fixtures = false
-
-  config.include Capybara
-  # config.before(:all) do
-  #     I18nDatabase::Locale.new( :code => 'en', :name => 'English' )
-  #     I18nDatabase::Locale.new( :code => 'es', :name => 'Spanish' )
-  #   end
 end
 
-include Devise::TestHelpers
+Spork.each_run do
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+  # Requires supporting ruby files with custom matchers and macros, etc,
+  # in spec/support/ and its subdirectories.
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+  RSpec.configure do |config|
+    config.mock_with :mocha
+
+    config.include Paperclip::Shoulda::Matchers
+    config.include(EmailSpec::Helpers)
+    config.include(EmailSpec::Matchers)
+
+    # If you're not using ActiveRecord, or you'd prefer not to run each of your
+    # examples within a transaction, remove the following line or assign false
+    # instead of true.
+    config.use_transactional_fixtures = true
+  end
+
+end
