@@ -21,10 +21,11 @@ gem 'rubyzip'
 gem 'bcrypt-ruby'
 gem 'colored'
 gem 'money'
-gem 'paperclip'
+gem 'paperclip', '2.3.4'
 gem 'rmagick'
 gem 'mime-types', :require => 'mime/types'
 gem 'httpclient'
+gem 'dynamic_form', '1.1.3'
 
 group :test, :development, :cucumber do
   gem "rspec-rails", "~> 2.0.0.beta.20"
