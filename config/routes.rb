@@ -1,4 +1,4 @@
-Ems::Application.routes.draw do |map|
+Ems::Application.routes.draw do
   # Offline Application Manifest File
   # match "/application.manifest" => Rails::Offline
 
