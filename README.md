@@ -1,5 +1,4 @@
-Changelog
-=========
+# Changelog
 
 ## 23. Oktober 2010
 
@@ -20,14 +19,6 @@ Changelog
 * kicked unnecessary javascript and css files
 * removed not needed rails modules
 
-## 9. October 2010
-
-* added cucumber and rpec by default
-* updated Gemfile to reflect latest gem versions
-* moved plugins to gems where possible
-* updated README to markdown
-* added FAQ to README to reflect installation problems with ruby-debug19
-
 ## 1. September 2010
 
 * update to mysql2 (dryed up the database.yml)
@@ -45,95 +36,54 @@ Changelog
 * using the mocha mocking framework with rspec
 * add a spec for the user, just to have a starting point
 
-Skeleton Specs
-==============
+# Skeleton Specs
 
 * Devise user / migration / aegis roles
 * 960gs CSS / reset css / jquery / ujs / various plugins
 * rspec / capybara / autotest / selenium (optional in rspec helper)
 
-Setup
-=====
+# Setup
 
 ## RVM
 
-* Create a new gemset for your project
-* Create .rvmrc file with: `echo "rvm 1.8.7-p302@YOUR_GEMSET"`
+* Create .rvmrc file with: `echo rvm --create 1.9.2-p0@mylinkpower"`
 
 ## Bundler
 
-* Install Bundler 1.0.0 with `gem install bundler --pre`
-* Install Gems with `bundle`
+* Install latest bundler 1.0.0.rc6 with `gem install bundler --pre`
+* Install gems with `bundle`
 
-## Bundler issues
+### Bundler issues
 
 In case you run into an issue with bundler that looks like this:
 
 .bc Valid types are [:development, :runtime], not nil (ArgumentError)
 
-Please make sure to install a recent bundler @gem install bundler --pre@ does the trick. Even the 1.0.0 relase doesn't fix this issue.
+Please make sure to install a recent bundler `gem install bundler --pre` does the trick. Even the 1.0.0 relase doesn't fix this issue.
 
 ## git
 
 Install missing plugins which are defined as submodules
 
-    git submodules init
-    git submodules update
+* `git submodules init`
+* `git submodules update`
 
-## App Setup
+## Application setup
 
-* Make sure to change the application name in application.rb and environment.rb
-* Change Application Layout to your needs
-* Change database.yml to your needs
+* Change database.yml to fit your local configuration
 
 ## Rake
 
-    rake db:create:all
-    rake db:migrate
-    rake db:test:clone
-    rake db:seed
-    rake ts:conf
+* `rake db:create:all`
+* `rake db:migrate`
+* `rake db:test:clone`
+* `rake db:seed`
+* `rake ts:conf` Only for sphinx if needed
 
 ## Tests
 
-* start `rake` to test factories and specs
+* start `rake spec` to test factories and specs
 * or start `autotest` to get into autotesting mode
+* start autotest with `AUTOFEATURE=true autotest` to start autotest with cucumber
+* Run `rake cucumber:all` to run all cucumber feature tests
 
-FAQ
-===
-
-## On a PPC with ruby 1.8.7 - What modifications do I have to make to run Geosfair with ruby 1.8.7?
-
-  Change Gemfile from "gem 'ruby-debug19'" to "gem 'ruby-debug'"
-
-  Update rubygems
-
-## I get an error compiling native extensions for linecache19 with ruby 1.9.2-head
-
-Try the following gem install command if you use rvm (change your username or src directory accordingly.).
-
-VERSION can be head or p0 or preview as an example. <br/>
-USERNAME is your mac os x home folder e.g. maxschulze
-
-    gem install linecache19 -- --with-ruby-include=/Users/USERNAME/.rvm/src/ruby-1.9.2-VERSION/
-
-## I get an errror compiling native extensions for ruby_core_source with ruby 1.9.2-head
-
-Try the following gem install command (see above for more details).
-
-    gem install ruby_core_source -- --with-ruby-include=/Users/USERNAME/.rvm/src/ruby-1.9.2-VERSION/
-
-## I get an errror compiling native extensions for ruby-debug-base19 with ruby 1.9.2-head
-
-Try the following gem install command (see above for more details).
-
-    gem install ruby-debug-base19 -- --with-ruby-include=/Users/USERNAME/.rvm/src/ruby-1.9.2-VERSION/
-
-## How do I get Celerity tests running for Cucumber javascript tests
-
-Installing Culerity Support
-
-    rvm install jruby
-
-    cd ~/.rvm/bin
-    ln -s jruby-1.4.0 jruby
