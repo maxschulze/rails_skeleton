@@ -1,6 +1,25 @@
 Changelog
 =========
 
+## 23. Oktober 2010
+
+* Gemfile: bumping devise to latest omniauth branch from github, for omniauth
+* Gemfile: added omniauth/dependencies to Gemfile
+* Gemfile: froze all versions in Gemfile for more stable development environment for all developers
+* Gemfile: updated thinking sphinx to 2.0.0.rc2 from rubygems instead of github
+* Gemfile: switched 'AASM' in favor of active model implementation 'transitions'
+* Gemfile: removed pdf-reader and rubyzip, httpclient, because not needed
+* Gemfile: Switched paperclip in favor of dragonfly for image uploads
+* Gemfile: Updated rspec to 2.0 stable release
+
+## 18. Oktober 2010
+
+* update to rails 3.0.1
+* change doc-style to markdown
+* updated documentation to reflect setup for ruby 1.9.2 and cucumber
+* kicked unnecessary javascript and css files
+* removed not needed rails modules
+
 ## 9. October 2010
 
 * added cucumber and rpec by default

@@ -1,54 +1,53 @@
-source 'http://gemcutter.org'
-source 'http://gems.github.com'
+source :rubygems
 
-gem "rails", "3.0.0"
-gem 'mysql2'
-gem 'sqlite3-ruby'
-gem 'yajl-ruby'
+gem "rails",                "~> 3.0.1"
+gem 'mysql2',               '~> 0.2.6'
+gem 'sqlite3-ruby',         '~> 1.3.1'
+gem 'yajl-ruby',            '~> 0.7.8'
 
-gem 'devise', '1.1.3', :git => 'git://github.com/maxschulze/devise.git', :branch => 'template_fix'
-
-gem "will_paginate", "~> 3.0.pre2"
-gem 'thinking-sphinx', :require => 'thinking_sphinx', :git => "git://github.com/freelancing-god/thinking-sphinx.git", :branch => "rails3"
-gem 'inherited_resources', '1.1.2'
-gem 'has_scope'
-gem 'responders'
-gem "aasm", '2.1.5'
-gem 'riddle'
-gem 'blockenspiel'
-gem 'pdf-reader'
-gem 'rubyzip'
+gem 'devise',               :git => 'git://github.com/plataformatec/devise.git', :branch => 'omniauth'
 gem 'bcrypt-ruby'
-gem 'colored'
-gem 'money'
-gem 'paperclip', '2.3.4'
-gem 'rmagick'
-gem 'mime-types', :require => 'mime/types'
-gem 'httpclient'
-gem 'dynamic_form', '1.1.3'
-gem 'simple_form', '1.2.2'
+
+gem "will_paginate",        "~> 3.0.pre2"
+
+gem 'thinking-sphinx',      '~> 2.0.0.rc2', :require => 'thinking_sphinx'
+gem 'riddle',               '~> 1.1.0'
+
+gem 'inherited_resources',  '~> 1.1.2'
+gem 'has_scope',            '~> 0.5.0'
+gem 'responders',           '~> 0.6.2'
+
+gem "transitions",          :git => 'git://github.com/qoobaa/transitions.git',
+                            :require => ["transitions", "active_record/transitions"]
+
+gem 'blockenspiel',         '~> 0.4.1'
+gem 'colored',              '~> 1.2'
+
+gem 'rmagick',              '~> 2.13.1', :require => 'RMagick'
+gem 'rack-cache',           '~> 0.5.3', :require => 'rack/cache'
+gem 'dragonfly',            '~>0.7.5'
+
+gem 'dynamic_form',         '~> 1.1.3'
+gem 'simple_form',          '~> 1.2.2'
 
 group :test, :development, :cucumber do
-  gem "rspec-rails", "~> 2.0.0.beta.20"
-  gem "autotest"
-  gem 'autotest-rails'
-  gem 'cucumber', '~> 0.9.2'
-  gem 'cucumber-rails', '~> 0.3.2'
-  gem 'mocha'
-  gem 'capybara', '~> 0.3.9', :require => false
-  gem 'culerity'
-  gem "launchy"
-  gem 'selenium-webdriver'
-  gem 'factory_girl_rails'
-  gem 'wirble'
-  gem 'annotate'
-  gem 'ruby-debug19'
-  gem 'hirb'
-  gem 'spork'
-  gem 'launchy'
-  # rc3 to support mysql2
-  gem 'database_cleaner', "~> 0.6.0.rc3"
-  gem 'autotest-growl'
-  gem 'email_spec', :git=>'git://github.com/bmabey/email-spec.git', :branch=>'rails3'
-  gem 'rack-test', '0.5.6' # freezing to fix EOFError
+  gem "rspec-rails",        '~> 2.0.0'
+  gem "autotest",           '~> 4.4.1'
+  gem 'autotest-rails',     '~> 4.1.0'
+  gem 'cucumber',           '~> 0.9.2'
+  gem 'cucumber-rails',     '~> 0.3.2'
+  gem 'mocha',              '~> 0.9.9'
+  gem 'capybara',           '~> 0.3.9', :require => false
+  gem 'culerity',           '~> 0.2.12'
+  gem "launchy",            '~> 0.3.7'
+  gem 'selenium-webdriver', '~> 0.0.29'
+  gem 'factory_girl_rails', '~> 1.0'
+  gem 'wirble',             '~> 0.1.3'
+  gem 'ruby-debug19',       '~> 0.11.6'
+  gem 'hirb',               '~> 0.3.4'
+  gem 'spork',              '~> 0.8.4'
+  gem 'database_cleaner',   "~> 0.6.0.rc3" # rc3 to support mysql2
+  gem 'autotest-growl',     '~> 0.2.6'
+  gem 'email_spec',         :git => 'git://github.com/bmabey/email-spec.git', :branch=>'rails3'
+  gem 'rack-test',          '0.5.6' # freezing to fix EOFError
 end
