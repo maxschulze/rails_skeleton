@@ -1,6 +1,15 @@
-# I18n.backend = I18n::Backend::Database.new # registers the backend
+require 'i18n_backend_database'
+
+# # I18n.backend = I18n::Backend::Database.new # registers the backend
 # I18n.backend.cache_store = :memory_store   # optional: specify an alternate cache store
 # I18n.backend.localize_text_tag = '^^'      # optional: specify an alternate localize text tag, the default is ^^
-# I18n.default_locale = :en
+I18n.default_locale = :en
 
-# I18n.backend = I18n::Backend::Database.new
+I18n.backend = I18n::Backend::Database.new
+
+I18n::Backend::ActiveRecord.send(:include, I18n::Backend::Memoize)
+I18n::Backend::ActiveRecord.send(:include, I18n::Backend::Flatten)
+I18n::Backend::Simple.send(:include, I18n::Backend::Memoize)
+I18n::Backend::Simple.send(:include, I18n::Backend::Pluralization)
+
+I18n.backend = I18n::Backend::Chain.new(I18n::Backend::Simple.new, I18n.backend)
