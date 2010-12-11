@@ -33,6 +33,7 @@ gem 'simple_form',          '~> 1.2.2'
 gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
 
 gem 'capistrano'
+gem 'capitate'
 
 group :test, :development, :cucumber do
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
