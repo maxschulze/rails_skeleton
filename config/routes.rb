@@ -1,4 +1,4 @@
-Securedin::Application.routes.draw do
+RenameMePlz::Application.routes.draw do
   # Offline Application Manifest File
   # match "/application.manifest" => Rails::Offline
 
