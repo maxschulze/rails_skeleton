@@ -42,7 +42,7 @@ group :test, :development, :cucumber do
   gem 'yard-rspec'
   gem 'bluecloth'
   gem 'yaml_db'
-  gem "rspec-rails",          '~> 2.0.0'
+  gem "rspec-rails",          '~> 2.2.0'
   gem 'rspec-rails-matchers', :git => 'git://github.com/sinefunc/rspec-rails-matchers.git'
   gem "watchr",               '~> 0.7'
   gem 'cucumber',             '~> 0.9.2'
