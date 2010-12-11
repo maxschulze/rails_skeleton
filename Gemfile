@@ -30,10 +30,10 @@ gem 'paperclip'
 gem 'dynamic_form',         '~> 1.1.3'
 gem 'simple_form',          '~> 1.2.2'
 
-gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
+gem 'i18n-active_record',   :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
 
 gem 'capistrano'
-gem 'capitate'
+gem 'capistrano-ext'
 
 group :test, :development, :cucumber do
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'

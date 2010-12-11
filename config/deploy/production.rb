@@ -29,11 +29,6 @@ namespace :deploy do
     
     run "touch #{deploy_to}/current/tmp/restart.txt"
   end
-  
-  desc "Config Search"
-  task :search_config, :roles => :app do
-    run "cd #{current_path} && rake ts:config RAILS_ENV=#{rails_env}"
-  end
 
   desc "Start Search"
   task :search_start, :roles => :app do
