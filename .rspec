@@ -1,3 +1,5 @@
 --colour
 --format nested
 --profile
+--tty
+--fail-fast

@@ -15,5 +15,5 @@ require 'rake/rdoctask'
 
 Securedin::Application.load_tasks
 
-require 'thinking_sphinx'
-require 'thinking_sphinx/tasks'
+# require 'thinking_sphinx'
+# require 'thinking_sphinx/tasks'
