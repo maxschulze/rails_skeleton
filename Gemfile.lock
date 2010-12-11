@@ -1,0 +1,290 @@
+GIT
+  remote: git://github.com/bmabey/email-spec.git
+  revision: e197a167a3f89cba6848ba144e342537e1cf64ab
+  branch: rails3
+  specs:
+    email_spec (0.6.2)
+
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: a23a52b2f7224d16f38d36a2f2848bb528d22616
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
+GIT
+  remote: git://github.com/qoobaa/transitions.git
+  revision: 8f88239ed93baf865203704f436034075947cccd
+  specs:
+    transitions (0.0.9)
+
+GIT
+  remote: git://github.com/sinefunc/rspec-rails-matchers.git
+  revision: c777b8fcaf258a23f123d9442b893eb088cb0014
+  specs:
+    rspec-rails-matchers (0.2.1)
+
+GIT
+  remote: git://github.com/svenfuchs/i18n-active_record.git
+  revision: 11c22d26a96f138c97636926665899caa8ff7619
+  specs:
+    i18n-active_record (0.0.1)
+
+GIT
+  remote: git://github.com/thedarkone/rails-dev-boost.git
+  revision: e6f3025ec5146c60836acbaf4549a517443bf216
+  specs:
+    rails-dev-boost (0.1.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.3)
+      actionpack (= 3.0.3)
+      mail (~> 2.2.9)
+    actionpack (3.0.3)
+      activemodel (= 3.0.3)
+      activesupport (= 3.0.3)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.13)
+      rack-test (~> 0.5.6)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.3)
+      activesupport (= 3.0.3)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activerecord (3.0.3)
+      activemodel (= 3.0.3)
+      activesupport (= 3.0.3)
+      arel (~> 2.0.2)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.3)
+      activemodel (= 3.0.3)
+      activesupport (= 3.0.3)
+    activesupport (3.0.3)
+    addressable (2.2.2)
+    archive-tar-minitar (0.5.2)
+    arel (2.0.6)
+    bcrypt-ruby (2.1.2)
+    blockenspiel (0.4.1)
+    bluecloth (2.0.9)
+    builder (2.1.2)
+    capistrano (2.5.19)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.0.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capybara (0.3.9)
+      culerity (>= 0.2.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (>= 0.0.3)
+    childprocess (0.1.5)
+      ffi (~> 0.6.3)
+    colored (1.2)
+    columnize (0.3.2)
+    cucumber (0.9.4)
+      builder (~> 2.1.2)
+      diff-lcs (~> 1.1.2)
+      gherkin (~> 2.2.9)
+      json (~> 1.4.6)
+      term-ansicolor (~> 1.0.5)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
+    culerity (0.2.12)
+    database_cleaner (0.6.0)
+    diff-lcs (1.1.2)
+    dynamic_form (1.1.3)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    factory_girl (1.3.2)
+    factory_girl_rails (1.0)
+      factory_girl (~> 1.3)
+      rails (>= 3.0.0.beta4)
+    fakeweb (1.3.0)
+    faraday (0.5.3)
+      addressable (~> 2.2.2)
+      multipart-post (~> 1.0.1)
+      rack (>= 1.1.0, < 2)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    gherkin (2.2.9)
+      json (~> 1.4.6)
+      term-ansicolor (~> 1.0.5)
+    has_scope (0.5.0)
+    highline (1.6.1)
+    i18n (0.5.0)
+    inherited_resources (1.1.2)
+      has_scope (~> 0.5.0)
+      responders (~> 0.6.0)
+    json (1.4.6)
+    json_pure (1.4.6)
+    linecache19 (0.5.11)
+      ruby_core_source (>= 0.1.4)
+    mail (2.2.12)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mocha (0.9.10)
+      rake
+    multi_json (0.0.5)
+    multipart-post (1.0.1)
+    mysql2 (0.2.6)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.0.23)
+    net-ssh-gateway (1.0.1)
+      net-ssh (>= 1.99.1)
+    nokogiri (1.4.4)
+    oa-core (0.1.6)
+      rack (~> 1.1)
+    oa-oauth (0.1.6)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.1.6)
+      oauth (~> 0.4.0)
+      oauth2 (~> 0.1.0)
+    oauth (0.4.4)
+    oauth2 (0.1.0)
+      faraday (~> 0.5.0)
+      multi_json (~> 0.0.4)
+    orm_adapter (0.0.3)
+    paperclip (2.3.6)
+      activerecord
+      activesupport
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.13)
+      rack (>= 1.0.0)
+    rack-test (0.5.6)
+      rack (>= 1.0)
+    rails (3.0.3)
+      actionmailer (= 3.0.3)
+      actionpack (= 3.0.3)
+      activerecord (= 3.0.3)
+      activeresource (= 3.0.3)
+      activesupport (= 3.0.3)
+      bundler (~> 1.0)
+      railties (= 3.0.3)
+    railties (3.0.3)
+      actionpack (= 3.0.3)
+      activesupport (= 3.0.3)
+      rake (>= 0.8.7)
+      thor (~> 0.14.4)
+    rake (0.8.7)
+    responders (0.6.2)
+    riddle (1.1.0)
+    rmagick (2.13.1)
+    rspec (2.2.0)
+      rspec-core (~> 2.2)
+      rspec-expectations (~> 2.2)
+      rspec-mocks (~> 2.2)
+    rspec-core (2.2.1)
+    rspec-expectations (2.2.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.2.0)
+    rspec-rails (2.2.1)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.2.0)
+    ruby-debug-base19 (0.11.24)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.4)
+      archive-tar-minitar (>= 0.5.2)
+    rubyzip (0.9.4)
+    selenium-webdriver (0.0.29)
+      childprocess (>= 0.0.7)
+      ffi (~> 0.6.3)
+      json_pure
+      rubyzip
+    simple_form (1.2.2)
+    sqlite3-ruby (1.3.2)
+    term-ansicolor (1.0.5)
+    thinking-sphinx (2.0.0.rc2)
+      activerecord (>= 3.0.0.rc)
+      riddle (>= 1.0.12)
+    thor (0.14.6)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.23)
+    warden (1.0.3)
+      rack (>= 1.0.0)
+    watchr (0.7)
+    will_paginate (3.0.pre2)
+    wirble (0.1.3)
+    yajl-ruby (0.7.8)
+    yaml_db (0.2.0)
+    yard (0.6.3)
+    yard-rspec (0.1)
+      yard
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt-ruby
+  blockenspiel (~> 0.4.1)
+  bluecloth
+  capistrano
+  capistrano-ext
+  capybara (~> 0.3.9)
+  colored (~> 1.2)
+  cucumber (~> 0.9.2)
+  cucumber-rails (~> 0.3.2)
+  culerity (~> 0.2.12)
+  database_cleaner (~> 0.6.0.rc3)
+  devise!
+  dynamic_form (~> 1.1.3)
+  email_spec!
+  factory_girl_rails (~> 1.0)
+  fakeweb
+  has_scope (~> 0.5.0)
+  i18n-active_record!
+  inherited_resources (~> 1.1.2)
+  mocha (~> 0.9.9)
+  mysql2 (~> 0.2.6)
+  oa-oauth
+  paperclip
+  rack-test (= 0.5.6)
+  rails (~> 3.0.3)
+  rails-dev-boost!
+  responders (~> 0.6.2)
+  riddle (~> 1.1.0)
+  rmagick (~> 2.13.1)
+  rspec-rails (~> 2.2.0)
+  rspec-rails-matchers!
+  ruby-debug19 (~> 0.11.6)
+  selenium-webdriver (~> 0.0.29)
+  simple_form (~> 1.2.2)
+  sqlite3-ruby (~> 1.3.1)
+  thinking-sphinx (~> 2.0.0.rc2)
+  transitions!
+  watchr (~> 0.7)
+  will_paginate (~> 3.0.pre2)
+  wirble (~> 0.1.3)
+  yajl-ruby (~> 0.7.8)
+  yaml_db
+  yard
+  yard-rspec
