@@ -7,4 +7,3 @@ config/database.yml
 db/schema.rb
 conf/*.sphinx.conf
 .DS_Store
-Gemfile.lock
