@@ -13,8 +13,7 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
-Ems::Application.load_tasks
+Securedin::Application.load_tasks
 
 require 'thinking_sphinx'
 require 'thinking_sphinx/tasks'
-

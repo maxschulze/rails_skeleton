@@ -12,14 +12,14 @@ end
 #----------------------------------------------------------------------#
 # factories, which do not rely on other factories
 #----------------------------------------------------------------------#
-Factory.define :user do |f|
-  f.email Factory.next :email
-  f.login Factory.next :login
-  f.first_name 'First'
-  f.last_name 'Last'
-  f.password "secret"
-  f.password_confirmation "secret"
-end
+# Factory.define :user do |f|
+#   f.email Factory.next :email
+#   f.login Factory.next :login
+#   f.first_name 'First'
+#   f.last_name 'Last'
+#   f.password "secret"
+#   f.password_confirmation "secret"
+# end
 
 #----------------------------------------------------------------------#
 # factories with associations

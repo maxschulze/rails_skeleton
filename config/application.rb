@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-module Ems
+module Securedin
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -32,6 +32,7 @@ module Ems
       g.template_engine   :inherited_templates
       g.test_framework    :rspec, :fixture => false, :view_specs => false
       g.stylesheets       false
+      g.integration_tool  :rspec
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.

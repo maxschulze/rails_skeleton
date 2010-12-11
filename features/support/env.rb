@@ -2,7 +2,7 @@
 ENV["RAILS_ENV"] ||= "test"
 
 require 'rubygems'
-require 'spork'
+# require 'spork'
 
 Spork.prefork do
   require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
@@ -40,6 +40,6 @@ Spork.each_run do
 
   require 'database_cleaner'
 
-  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.strategy = :truncation, { :except => %w[ translations ] }
   DatabaseCleaner.clean
 end
