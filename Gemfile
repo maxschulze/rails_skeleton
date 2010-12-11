@@ -32,6 +32,8 @@ gem 'simple_form',          '~> 1.2.2'
 
 gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
 
+gem 'capistrano'
+
 group :test, :development, :cucumber do
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
   gem 'fakeweb'
@@ -39,26 +41,19 @@ group :test, :development, :cucumber do
   gem 'yard-rspec'
   gem 'bluecloth'
   gem 'yaml_db'
-  gem 'ci_reporter'
   gem "rspec-rails",          '~> 2.0.0'
-  gem 'rspec-rails-matchers', :git => 'git://github.com/maxschulze/rspec-rails-matchers.git'
-  gem "autotest",             '~> 4.4.1'
-  gem 'autotest-rails',       '~> 4.1.0'
+  gem 'rspec-rails-matchers', :git => 'git://github.com/sinefunc/rspec-rails-matchers.git'
+  gem "watchr",               '~> 4.4.1'
   gem 'cucumber',             '~> 0.9.2'
   gem 'cucumber-rails',       '~> 0.3.2'
   gem 'mocha',                '~> 0.9.9'
   gem 'capybara',             '~> 0.3.9', :require => false
   gem 'culerity',             '~> 0.2.12'
-  gem "launchy",              '~> 0.3.7'
   gem 'selenium-webdriver',   '~> 0.0.29'
   gem 'factory_girl_rails',   '~> 1.0'
   gem 'wirble',               '~> 0.1.3'
   gem 'ruby-debug19',         '~> 0.11.6'
-  gem 'hirb',                 '~> 0.3.4'
-  gem 'spork',                '~> 0.8.4'
   gem 'database_cleaner',     "~> 0.6.0.rc3" # rc3 to support mysql2
-  gem 'autotest-growl',       '~> 0.2.6'
   gem 'email_spec',           :git => 'git://github.com/bmabey/email-spec.git', :branch=>'rails3'
   gem 'rack-test',            '0.5.6' # freezing to fix EOFError
-  gem 'pickler'
 end
