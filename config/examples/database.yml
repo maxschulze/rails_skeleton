@@ -1,0 +1,28 @@
+mysql: &mysql
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
+  encoding: 'utf8'
+  pool: 5
+  timeout: 5000
+
+sqlite: &sqlite
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *sqlite
+  # database: app_development
+  database: db/development.sqlite3
+
+test:
+  <<: *sqlite
+  # database: app_test
+  database: db/test.sqlite3
+
+production:
+  <<: *sqlite
+  # database: app_production
+  database: db/production.sqlite3

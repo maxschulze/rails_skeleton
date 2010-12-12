@@ -282,3 +282,6 @@ DEPENDENCIES
   yaml_db
   yard
   yard-rspec
+
+METADATA
+  version: 1.0.6

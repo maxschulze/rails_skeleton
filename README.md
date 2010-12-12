@@ -1,40 +1,29 @@
 # Skeleton Specs
 
-* Devise user / migration / aegis roles
 * 960gs CSS / reset css / jquery / ujs / various plugins
-* rspec / capybara / autotest / selenium (optional in rspec helper)
+* rspec / capybara / selenium (optional in rspec helper)
 
 # Setup
 
+In short:
+
+1. setup rvmrc
+2. install gems via bundler
+3. thor setup:app MyAppName
+
 ## RVM
 
-* Create .rvmrc file with: `echo rvm --create 1.9.2-p0@mylinkpower"`
+* Create .rvmrc file with: `echo rvm --create 1.9.2-p0@my_app_name"`
 
 ## Bundler
 
 * Install latest bundler 1.0.7 `gem install bundler`
 * Install gems with `bundle`
 
-## git
+## Setup script
 
-Install missing plugins which are defined as submodules
+Setup the application with:
 
-* `git submodules init`
-* `git submodules update`
+    thor setup:app my_app_name
 
-## Application setup
-
-* Change database.yml to fit your local configuration
-
-    cp config/database.yml.sample config/database.yml
-
-## Rake
-
-* `rake db:create:all`
-* `rake db:migrate`
-* `rake db:test:clone`
-* `rake db:seed`
-
-## Tests
-
-* start tests with `rake`
+And follow the instructions.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 12. December 2010
+
+* Adde a setup script `thor setup:app`.
+
 ## 11. December 2010
 
 * moved changelog into its own file

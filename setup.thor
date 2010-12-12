@@ -1,0 +1,84 @@
+class Setup < Thor
+
+  desc "config [NAME]", "copy configuration files"
+  method_options :force => :boolean
+  def config(name = "*")
+    Dir["config/examples/#{name}"].each do |source|
+      destination = "config/#{File.basename(source)}"
+      FileUtils.rm(destination) if options[:force]
+      if File.exist?(destination)
+        puts "Skipping #{destination} because it already exists"
+      else
+        puts "Generating #{destination}"
+        FileUtils.cp(source,destination)
+      end
+    end
+  end
+
+  desc "rename TO [--from FROM]", "Renames your app"
+  method_options :from => "RenameMePlz"
+  def rename(to)
+    from = options[:from]
+    (Dir["config/**/*.rb"] + ["Rakefile"]).each do |source|
+      # in file editing like this:
+      # %x{ruby -pi -e "gsub(/#{from}/, '#{to}')" #{source}}
+      File.open(source, 'r+') do |f|
+        out = ""
+        f.each do |line|
+          out << line.gsub(/#{from}/) {to} # store each line
+        end
+        f.pos = 0 # reset the position
+        f.print out #print file
+        f.truncate(f.pos) # set file length
+      end # file closes automagically
+    end
+  end
+
+  desc "git APP_NAME", "sets up the git repository"
+  def git(appname)
+    %x{git remote rename origin skeleton}
+
+    repo = ask("Which repository (leave empty for default)? :")
+    if repo == ""
+      add_origin("git@uv:#{appname}.git")
+    else
+      add_origin(repo,false)
+    end
+  end
+
+  desc "app APP_NAME", "renames your app and creates a .rvmrc file for it"
+  def app(app_name = "foo_bar")
+    # require File.expand_path("config/environment.rb")
+    invoke :rename, [camel_case(app_name)]
+    invoke :config, ["*"]
+    puts "Initializing submodules"
+    %x{git submodule init}
+    %x{git submodule update}
+    puts "Creating databases"
+    %x{rake db:migrate}
+    %x{rake db:test:clone}
+    %x{rake db:seed}
+    puts "Testing this app template"
+    %x{rake}
+    invoke :git, [app_name]
+  end
+
+  private
+
+  def camel_case str
+    str.split(/_/).map(&:capitalize).join
+  end
+
+  def add_origin(name, default = true)
+    %x{git remote add origin #{name}}
+    if default
+      puts <<-GIT
+#{'*'*70}
+# gitosis-admin/gitosis.conf
+[group urbanvention]
+writable = #{name}
+#{'*'*70}
+GIT
+    end
+  end
+end
