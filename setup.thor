@@ -37,13 +37,15 @@ class Setup < Thor
   desc "git APP_NAME", "sets up the git repository"
   def git(appname)
     %x{git remote rename origin skeleton}
-
+    %x{git branch "skeleton"}
     repo = ask("Which repository (leave empty for default)? :")
     if repo == ""
-      add_origin("git@uv:#{appname}.git")
+      add_origin("#{appname}")
     else
       add_origin(repo,false)
     end
+    push_to_master = ask("push to master? (no/yes)")
+    if push_to_master == "yes" %x{git push origin master}
   end
 
   desc "app APP_NAME", "renames your app and creates a .rvmrc file for it"
