@@ -38,6 +38,7 @@ class Setup < Thor
   def git(appname)
     %x{git remote rename origin skeleton}
     %x{git branch "skeleton"}
+    %x{git commit -vm "renamed app"}
     repo = ask("Which repository (leave empty for default)? :")
     if repo == ""
       add_origin("#{appname}")
