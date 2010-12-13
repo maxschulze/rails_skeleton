@@ -19,7 +19,7 @@ class Setup < Thor
   method_options :from => "RenameMePlz"
   def rename(to)
     from = options[:from]
-    (Dir["config/**/*.rb"] + ["Rakefile"]).each do |source|
+    (Dir["config/**/*.rb"] + ["Rakefile","config.ru"]).each do |source|
       # in file editing like this:
       # %x{ruby -pi -e "gsub(/#{from}/, '#{to}')" #{source}}
       File.open(source, 'r+') do |f|
@@ -36,8 +36,7 @@ class Setup < Thor
 
   desc "git APP_NAME", "sets up the git repository"
   def git(appname)
-    %x{git remote rename origin skeleton}
-    %x{git branch "skeleton"}
+    setup_skeleton_branch
     %x{git commit -vm "renamed app"}
     repo = ask("Which repository (leave empty for default)? :")
     if repo == ""
@@ -46,7 +45,7 @@ class Setup < Thor
       add_origin(repo,false)
     end
     push_to_master = ask("push to master? (no/yes)")
-    if push_to_master == "yes" %x{git push origin master}
+    %x{git push origin master} if push_to_master == "yes"
   end
 
   desc "app APP_NAME", "renames your app and creates a .rvmrc file for it"
@@ -67,6 +66,13 @@ class Setup < Thor
   end
 
   private
+
+  def setup_skeleton_branch
+    %x{git remote rename origin skeleton}
+    %x{git branch "skeleton"}
+    %x{git config branch.skeleton.remote skeleton}
+    %x{git config branch.skeleton.merge refs/heads/master}
+  end
 
   def camel_case str
     str.split(/_/).map(&:capitalize).join
