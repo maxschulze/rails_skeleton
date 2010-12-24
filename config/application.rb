@@ -29,7 +29,7 @@ module RenameMePlz
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
       g.orm               :active_record
-      g.template_engine   :inherited_templates
+      g.template_engine   :erb
       g.test_framework    :rspec, :fixture => false, :view_specs => false
       g.stylesheets       false
       g.integration_tool  :rspec

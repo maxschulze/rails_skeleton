@@ -33,10 +33,6 @@ gem "paperclip"
 gem "dynamic_form",         "~> 1.1.3"
 gem "simple_form",          "~> 1.2.2"
 
-## Inherited Templates
-gem "blockenspiel",         "~> 0.4.1"
-gem "colored",              "~> 1.2"
-
 ## Pagination
 gem "will_paginate",        "~> 3.0.pre2"
 
@@ -62,8 +58,7 @@ group :test, :development, :cucumber do
   gem "selenium-webdriver",   "~> 0.0.29"
   gem "factory_girl_rails",   "~> 1.0"
   gem "wirble",               "~> 0.1.3"
-  gem "ruby-debug19",         "~> 0.11.6"
+  gem "ruby-debug",           "~> 0.10.4"
   gem "database_cleaner",     "~> 0.6.0.rc3" # rc3 to support mysql2
-  gem "email_spec",           :git => "git://github.com/bmabey/email-spec.git", :branch=>"rails3"
   gem "rack-test",            "0.5.6" # freezing to fix EOFError
 end

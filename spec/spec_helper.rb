@@ -25,6 +25,4 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Paperclip::Shoulda::Matchers
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
 end

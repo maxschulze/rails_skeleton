@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/bmabey/email-spec.git
-  revision: e197a167a3f89cba6848ba144e342537e1cf64ab
-  branch: rails3
-  specs:
-    email_spec (0.6.2)
-
-GIT
   remote: git://github.com/plataformatec/devise.git
   revision: a23a52b2f7224d16f38d36a2f2848bb528d22616
   specs:
@@ -69,10 +62,8 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     addressable (2.2.2)
-    archive-tar-minitar (0.5.2)
     arel (2.0.6)
     bcrypt-ruby (2.1.2)
-    blockenspiel (0.4.1)
     bluecloth (2.0.9)
     builder (2.1.2)
     capistrano (2.5.19)
@@ -92,7 +83,6 @@ GEM
       selenium-webdriver (>= 0.0.3)
     childprocess (0.1.5)
       ffi (~> 0.6.3)
-    colored (1.2)
     columnize (0.3.2)
     cucumber (0.10.0)
       builder (>= 2.1.2)
@@ -130,8 +120,7 @@ GEM
       responders (~> 0.6.0)
     json (1.4.6)
     json_pure (1.4.6)
-    linecache19 (0.5.11)
-      ruby_core_source (>= 0.1.4)
+    linecache (0.43)
     mail (2.2.12)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -202,16 +191,11 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.2.0)
-    ruby-debug-base19 (0.11.24)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
-    ruby_core_source (0.1.4)
-      archive-tar-minitar (>= 0.5.2)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     rubyzip (0.9.4)
     selenium-webdriver (0.0.29)
       childprocess (>= 0.0.7)
@@ -241,19 +225,16 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
-  blockenspiel (~> 0.4.1)
   bluecloth
   capistrano
   capistrano-ext
   capybara (~> 0.3.9)
-  colored (~> 1.2)
   cucumber (~> 0.10.0)
   cucumber-rails (~> 0.3.2)
   culerity (~> 0.2.12)
   database_cleaner (~> 0.6.0.rc3)
   devise!
   dynamic_form (~> 1.1.3)
-  email_spec!
   factory_girl_rails (~> 1.0)
   fakeweb
   has_scope (~> 0.5.0)
@@ -270,7 +251,7 @@ DEPENDENCIES
   rmagick (~> 2.13.1)
   rspec-rails (~> 2.2.0)
   rspec-rails-matchers!
-  ruby-debug19 (~> 0.11.6)
+  ruby-debug
   selenium-webdriver (~> 0.0.29)
   simple_form (~> 1.2.2)
   sqlite3-ruby (~> 1.3.1)
@@ -282,6 +263,3 @@ DEPENDENCIES
   yaml_db
   yard
   yard-rspec
-
-METADATA
-  version: 1.0.6
