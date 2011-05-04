@@ -58,4 +58,5 @@ group :test, :development, :cucumber do
   gem "rspec-rails-matchers", :git => "https://github.com/sinefunc/rspec-rails-matchers.git" # dry rspec
   gem 'hpricot'
   gem 'ruby_parser'
+  gem 'rr'
 end

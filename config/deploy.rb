@@ -5,5 +5,5 @@ require 'capistrano/ext/multistage'
 require "bundler/capistrano"
 require "recipes/database"
 
-set :stages, %w(production)
-set :default_stage, "production"
+set :stages, %w(staging)
+set :default_stage, "staging"
