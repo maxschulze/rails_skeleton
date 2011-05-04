@@ -1,0 +1,9 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+config/database.yml
+.rvmrc
+db/schema.rb
+conf/*.sphinx.conf
+.DS_Store

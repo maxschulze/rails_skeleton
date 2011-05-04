@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>APP NAME HERE | <%= yield :title %></title>
+    <%= stylesheet_link_tag 'reset', 'grid', 'application' %>
+    <%= javascript_include_tag 'jquery', 'jquery.ui', 'json', 'rails', 'application' %>
+    <%= csrf_meta_tag %>
+  </head>
+
+  <body class="<%= controller_name %>">
+
+    <%= yield %>
+
+  </body>
+</html>

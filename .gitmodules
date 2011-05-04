@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/country_select"]
+	path = vendor/plugins/country_select
+	url = git://github.com/rails/country_select.git
